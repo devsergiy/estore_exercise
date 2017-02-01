@@ -1,0 +1,15 @@
+<div class="modal-header">
+<%= @product.name%>
+</div>
+
+<div class="modal-body">
+  <p><strong>brand:&nbsp;</strong><%= @product.brand %></p>
+  <p><strong>model:&nbsp;</strong><%= @product.model %></p>
+  <p><strong>sku:&nbsp;</strong><%= @product.sku %></p>
+  <p><strong>price:&nbsp;</strong><%= @product.price %></p>
+  <p><strong>desc:&nbsp;</strong><%= @product.desc %></p>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary">Add to cart</button>
+</div>

@@ -1,0 +1,14 @@
+<div class="card col-md-3 product">
+  <div class="card-block">
+    <h4 class="card-title"><%= product.name %></h4>
+    <p class="card-text">
+      <strong>brand:&nbsp;</strong>
+      <%= product.brand %>
+    </p>
+    <p class="card-text">
+      <strong>model:&nbsp;</strong>
+      <%= product.model %>
+    </p>
+    <%=link_to 'Show details', product_url(product), remote: true, class: "btn btn-primary" %>
+  </div>
+</div>
