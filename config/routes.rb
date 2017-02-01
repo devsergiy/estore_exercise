@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
   resources :products
   resource :cart, only: [:show, :destroy] do
-    resource :items, only: [:create, :destroy, :update], controller: :cart_items
+    resources :items, only: [:create, :destroy], controller: :cart_items do
+      member do
+        get :increase_count
+        get :decrease_count
+      end
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

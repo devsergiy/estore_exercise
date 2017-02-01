@@ -12,8 +12,8 @@
       <li class="nav-item">
         <a class="nav-link" href="/cart">
           Cart
-          <% if false %>
-            <span class="badge badge-pill badge-info hide">10</span>
+          <% if @cart_item_count && @cart_item_count > 0 %>
+            <span class="badge badge-pill badge-info hide"><%= @cart_item_count %></span>
           <% end %>
         </a>
       </li>

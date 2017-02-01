@@ -11,7 +11,7 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   def destroy
     @cart.destroy
-    redirect_to carts_url, notice: 'Cart was successfully destroyed.'
+    redirect_to cart_url, notice: 'Cart was successfully cleaned.'
   end
 
   private

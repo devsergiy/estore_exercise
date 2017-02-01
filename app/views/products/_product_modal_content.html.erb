@@ -11,5 +11,5 @@
 </div>
 
 <div class="modal-footer">
-  <button type="button" class="btn btn-primary">Add to cart</button>
+  <%= button_to 'Add to cart', cart_items_path(product_id: @product.id), method: :post, class: "btn btn-primary" %>
 </div>
