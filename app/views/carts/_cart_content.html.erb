@@ -1,0 +1,37 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cart.cart_items.each do |cart_item| %>
+      <tr>
+        <td><%= cart_item.product.name %> </td>
+        <td><%= cart_item.count %> </td>
+        <td>
+          <%= link_to increase_count_cart_item_path(cart_item) do %>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to decrease_count_cart_item_path(cart_item) do %>
+            <i class="fa fa-minus-circle" aria-hidden="true"></i>
+          <% end %>
+        </td>
+        <td>
+          <%= button_to cart_item_path(cart_item), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-link' do %>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Remove all items in cart', cart_path, method: :delete, data: { confirm: 'Are you sure?' } %>
