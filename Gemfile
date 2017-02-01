@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'font-awesome-rails'
 
 ### utils
 gem 'devise'
